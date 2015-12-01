@@ -1,5 +1,4 @@
 import UIKit
-import CloudKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -10,12 +9,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         iCloud.updateState()
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "iCloudAvailabilityChanged:", name: NSUbiquityIdentityDidChangeNotification, object: nil)
-        
+        NSNotificationCenter.defaultCenter().addObserver(iCloud.self, selector: "iCloudAvailabilityChanged:", name: NSUbiquityIdentityDidChangeNotification, object: nil)
+
+        NSNotificationCenter.defaultCenter().addObserver(iCloud.self, selector: "keyValueStoreDidChangeExternally:", name: NSUbiquitousKeyValueStoreDidChangeExternallyNotification, object: nil)
+
         return true
-    }
-    
-    func iCloudAvailabilityChanged(notification: NSNotification?){
-        iCloud.updateState()
     }
 }

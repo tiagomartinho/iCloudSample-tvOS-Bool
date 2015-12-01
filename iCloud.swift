@@ -2,19 +2,24 @@ import Foundation
 
 class iCloud {
     
-    static let UbiquityIdentityTokenKey = "tm.UbiquityIdentityToken"
-    
-    static func updateState() {
-        if isAvailable {
-            NSUserDefaults.standardUserDefaults().setObject(tokenData, forKey: UbiquityIdentityTokenKey)
-        }
-        else {
-            NSUserDefaults.standardUserDefaults().removeObjectForKey(UbiquityIdentityTokenKey)
-        }
-    }
+    static let kUbiquityIdentityTokenKey = "tm.UbiquityIdentityToken"
     
     static var isAvailable:Bool {
         return (NSFileManager.defaultManager().ubiquityIdentityToken != nil)
+    }
+    
+    static func iCloudAvailabilityChanged(notification: NSNotification?){
+        updateState()
+    }
+    
+    static func updateState() {
+        //TODO compare with previous state and in case that is un/available copy data from iCloud to local storage and vice versa
+        if isAvailable {
+            NSUserDefaults.standardUserDefaults().setObject(tokenData, forKey: kUbiquityIdentityTokenKey)
+        }
+        else {
+            NSUserDefaults.standardUserDefaults().removeObjectForKey(kUbiquityIdentityTokenKey)
+        }
     }
     
     static var tokenData:NSData? {
@@ -25,5 +30,27 @@ class iCloud {
         else {
             return nil
         }
+    }
+    
+    static func keyValueStoreDidChangeExternally(notification: NSNotification?){
+        guard let changeReason = notification?.userInfo?[NSUbiquitousKeyValueStoreChangeReasonKey]?.integerValue else { return }
+        
+        switch changeReason {
+        case NSUbiquitousKeyValueStoreServerChange:
+            break
+        case NSUbiquitousKeyValueStoreInitialSyncChange:
+            break
+        case NSUbiquitousKeyValueStoreQuotaViolationChange:
+            break
+        case NSUbiquitousKeyValueStoreAccountChange:
+            break
+        default:
+            break
+        }
+        synchronize()
+    }
+    
+    static func synchronize() {
+        NSUbiquitousKeyValueStore.defaultStore().synchronize()
     }
 }
