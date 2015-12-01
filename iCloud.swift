@@ -4,6 +4,11 @@ class iCloud {
     
     static let kUbiquityIdentityTokenKey = "tm.UbiquityIdentityToken"
     
+    static func registerForiCloudNotificatons() {
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "iCloudAvailabilityChanged:", name: NSUbiquityIdentityDidChangeNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyValueStoreDidChangeExternally:", name: NSUbiquitousKeyValueStoreDidChangeExternallyNotification, object: nil)
+    }
+    
     static var isAvailable:Bool {
         return (NSFileManager.defaultManager().ubiquityIdentityToken != nil)
     }
