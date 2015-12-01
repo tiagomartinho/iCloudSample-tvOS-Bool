@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		EA41506A1C0D78EA004FCDAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA82EAEF1C0C302800ADD07E /* AppDelegate.swift */; };
-		EA82EAC31C0C301D00ADD07E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA82EAC21C0C301D00ADD07E /* ViewController.swift */; };
+		EA41506C1C0D7A93004FCDAA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA82EAF11C0C302800ADD07E /* ViewController.swift */; };
+		EA41506E1C0D7AC8004FCDAA /* iCloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA41506D1C0D7AC8004FCDAA /* iCloud.swift */; };
+		EA41506F1C0D7B6F004FCDAA /* iCloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA41506D1C0D7AC8004FCDAA /* iCloud.swift */; };
 		EA82EAC61C0C301D00ADD07E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA82EAC41C0C301D00ADD07E /* Main.storyboard */; };
 		EA82EAC81C0C301D00ADD07E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA82EAC71C0C301D00ADD07E /* Assets.xcassets */; };
 		EA82EAD31C0C301E00ADD07E /* tvOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA82EAD21C0C301E00ADD07E /* tvOSTests.swift */; };
@@ -55,8 +57,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EA41506D1C0D7AC8004FCDAA /* iCloud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iCloud.swift; sourceTree = "<group>"; };
 		EA82EABD1C0C301D00ADD07E /* tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tvOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA82EAC21C0C301D00ADD07E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EA82EAC51C0C301D00ADD07E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA82EAC71C0C301D00ADD07E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA82EAC91C0C301D00ADD07E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -68,7 +70,7 @@
 		EA82EADF1C0C301E00ADD07E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA82EAED1C0C302800ADD07E /* iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA82EAEF1C0C302800ADD07E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = iOS/AppDelegate.swift; sourceTree = "<group>"; };
-		EA82EAF11C0C302800ADD07E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EA82EAF11C0C302800ADD07E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = iOS/ViewController.swift; sourceTree = "<group>"; };
 		EA82EAF41C0C302800ADD07E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA82EAF61C0C302800ADD07E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA82EAF91C0C302800ADD07E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -135,6 +137,8 @@
 			isa = PBXGroup;
 			children = (
 				EA82EAEF1C0C302800ADD07E /* AppDelegate.swift */,
+				EA82EAF11C0C302800ADD07E /* ViewController.swift */,
+				EA41506D1C0D7AC8004FCDAA /* iCloud.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -171,7 +175,6 @@
 			isa = PBXGroup;
 			children = (
 				EA82EB1C1C0C309B00ADD07E /* tvOS.entitlements */,
-				EA82EAC21C0C301D00ADD07E /* ViewController.swift */,
 				EA82EAC41C0C301D00ADD07E /* Main.storyboard */,
 				EA82EAC71C0C301D00ADD07E /* Assets.xcassets */,
 				EA82EAC91C0C301D00ADD07E /* Info.plist */,
@@ -201,7 +204,6 @@
 			isa = PBXGroup;
 			children = (
 				EA82EB1B1C0C307500ADD07E /* iOS.entitlements */,
-				EA82EAF11C0C302800ADD07E /* ViewController.swift */,
 				EA82EAF31C0C302800ADD07E /* Main.storyboard */,
 				EA82EAF61C0C302800ADD07E /* Assets.xcassets */,
 				EA82EAF81C0C302800ADD07E /* LaunchScreen.storyboard */,
@@ -460,8 +462,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA41506C1C0D7A93004FCDAA /* ViewController.swift in Sources */,
+				EA41506E1C0D7AC8004FCDAA /* iCloud.swift in Sources */,
 				EA41506A1C0D78EA004FCDAA /* AppDelegate.swift in Sources */,
-				EA82EAC31C0C301D00ADD07E /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +490,7 @@
 			files = (
 				EA82EAF21C0C302800ADD07E /* ViewController.swift in Sources */,
 				EA82EAF01C0C302800ADD07E /* AppDelegate.swift in Sources */,
+				EA41506F1C0D7B6F004FCDAA /* iCloud.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

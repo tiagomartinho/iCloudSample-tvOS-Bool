@@ -8,7 +8,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        iCloudUpdateState()
+        iCloud.updateState()
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "iCloudAvailabilityChanged:", name: NSUbiquityIdentityDidChangeNotification, object: nil)
         
@@ -16,29 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func iCloudAvailabilityChanged(notification: NSNotification?){
-        iCloudUpdateState()
-    }
-    
-    func iCloudUpdateState() {
-        if iCloudAvailable {
-            NSUserDefaults.standardUserDefaults().setObject(tokenData, forKey: "com.apple.MyAppName.UbiquityIdentityToken")
-        }
-        else {
-            NSUserDefaults.standardUserDefaults().removeObjectForKey("com.apple.MyAppName.UbiquityIdentityToken")
-        }
-    }
-    
-    var iCloudAvailable:Bool {
-        return (NSFileManager.defaultManager().ubiquityIdentityToken != nil)
-    }
-    
-    var tokenData:NSData? {
-        if let currentiCloudToken = NSFileManager.defaultManager().ubiquityIdentityToken {
-            let newTokenData: NSData = NSKeyedArchiver.archivedDataWithRootObject(currentiCloudToken)
-            return newTokenData
-        }
-        else {
-            return nil
-        }
+        iCloud.updateState()
     }
 }
