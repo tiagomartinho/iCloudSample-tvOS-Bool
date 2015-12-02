@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>anotherApp.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>iOS.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -17,6 +22,21 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>EA3530C31C0ED2F600F9EFB8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EA3530D61C0ED2F600F9EFB8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EA3530E11C0ED2F600F9EFB8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>EA82EABC1C0C301D00ADD07E</key>
 		<dict>
 			<key>primary</key>
