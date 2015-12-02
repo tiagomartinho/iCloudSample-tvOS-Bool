@@ -24,6 +24,9 @@
                                     <segment title="False"/>
                                     <segment title="True"/>
                                 </segments>
+                                <connections>
+                                    <action selector="toogleState:" destination="BYZ-38-t0r" eventType="valueChanged" id="1kE-nx-vc5"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <animations/>

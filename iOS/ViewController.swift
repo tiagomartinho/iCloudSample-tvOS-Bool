@@ -2,32 +2,30 @@ import UIKit
 
 class ViewController: UIViewController {
   
-    var aBoolInTheCloud:Bool = true
+    let iCloudKey = "aBoolInTheCloud"
+    var aBoolInTheCloud:Bool {
+        set {
+            NSUbiquitousKeyValueStore.defaultStore().setBool(newValue, forKey: iCloudKey)
+            updateUI()
+        }
+        get {
+            return NSUbiquitousKeyValueStore.defaultStore().boolForKey(iCloudKey)
+        }
+    }
     
-    @IBOutlet weak var boolSegmentedControl: UISegmentedControl!
+    @IBOutlet weak var boolSegmentedControl: UISegmentedControl! {
+        didSet {
+            updateUI()
+        }
+    }
+    
+    @IBAction func toogleState(sender: UISegmentedControl) {
+        aBoolInTheCloud = (boolSegmentedControl.selectedSegmentIndex == 1)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if iCloud.isAvailable {
-            updateState()
-        }
         updateUI()
-    }
-    
-    func updateState(){
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {() -> Void in
-            if let myContainer = NSFileManager.defaultManager().URLForUbiquityContainerIdentifier(nil){
-                // Your app can write to the iCloud container
-                print(myContainer)
-                
-                self.aBoolInTheCloud = NSUbiquitousKeyValueStore.defaultStore().boolForKey("aBoolInTheCloud")
-                
-                dispatch_async(dispatch_get_main_queue(), {() -> Void in
-                    // On the main thread, update UI and state as appropriate
-                    self.updateUI()
-                })
-            }
-        })
     }
     
     func updateUI(){
