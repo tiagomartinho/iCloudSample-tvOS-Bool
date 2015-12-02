@@ -17,8 +17,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="baG-zk-LM9">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Zgu-Pg-S5B">
                                 <rect key="frame" x="254" y="286" width="93" height="29"/>
+                                <animations/>
+                                <segments>
+                                    <segment title="False"/>
+                                    <segment title="True"/>
+                                </segments>
+                                <connections>
+                                    <action selector="toogleState:" destination="BYZ-38-t0r" eventType="valueChanged" id="ljL-ec-6uN"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TYe-5E-9qA">
+                                <rect key="frame" x="254" y="322" width="93" height="29"/>
+                                <animations/>
+                                <segments>
+                                    <segment title="False"/>
+                                    <segment title="True"/>
+                                </segments>
+                                <connections>
+                                    <action selector="toogleState:" destination="BYZ-38-t0r" eventType="valueChanged" id="aMF-la-XIo"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="baG-zk-LM9">
+                                <rect key="frame" x="254" y="250" width="93" height="29"/>
                                 <animations/>
                                 <segments>
                                     <segment title="False"/>
@@ -32,18 +54,28 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="TYe-5E-9qA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2RT-Bd-160"/>
+                            <constraint firstItem="Zgu-Pg-S5B" firstAttribute="top" secondItem="baG-zk-LM9" secondAttribute="bottom" constant="8" id="61x-YK-xgV"/>
+                            <constraint firstItem="baG-zk-LM9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EsF-1I-e6I"/>
+                            <constraint firstItem="TYe-5E-9qA" firstAttribute="top" secondItem="Zgu-Pg-S5B" secondAttribute="bottom" constant="8" id="Oaa-bc-7Av"/>
                             <constraint firstItem="baG-zk-LM9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Qar-Mi-xI2"/>
                             <constraint firstItem="baG-zk-LM9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TxN-dq-TJ0"/>
                             <constraint firstItem="baG-zk-LM9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="YcH-UR-aXB"/>
+                            <constraint firstItem="Zgu-Pg-S5B" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZNZ-Am-ZKE"/>
+                            <constraint firstItem="Zgu-Pg-S5B" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hx3-zy-ann"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="Qar-Mi-xI2"/>
+                                <exclude reference="TxN-dq-TJ0"/>
                                 <exclude reference="YcH-UR-aXB"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="anotherBoolSegmentedControl" destination="Zgu-Pg-S5B" id="8aL-Gg-y2C"/>
                         <outlet property="boolSegmentedControl" destination="baG-zk-LM9" id="yHZ-Ef-dHx"/>
+                        <outlet property="yetAnotherBoolSegmentedControl" destination="TYe-5E-9qA" id="qgf-Fg-DQ2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -28,16 +28,46 @@
                                     <action selector="toogleState:" destination="BYZ-38-t0r" eventType="valueChanged" id="JRw-iJ-H3D"/>
                                 </connections>
                             </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="34H-6O-YLW">
+                                <rect key="frame" x="825" y="583" width="270" height="70"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.10000000000000001" colorSpace="calibratedWhite"/>
+                                <segments>
+                                    <segment title="False"/>
+                                    <segment title="True"/>
+                                </segments>
+                                <connections>
+                                    <action selector="toogleState:" destination="BYZ-38-t0r" eventType="valueChanged" id="ffX-Sa-wK1"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="CbF-ML-xpa">
+                                <rect key="frame" x="825" y="429" width="270" height="70"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.10000000000000001" colorSpace="calibratedWhite"/>
+                                <segments>
+                                    <segment title="False"/>
+                                    <segment title="True"/>
+                                </segments>
+                                <connections>
+                                    <action selector="toogleState:" destination="BYZ-38-t0r" eventType="valueChanged" id="mcH-Ll-hrm"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="W17-jM-dvf" firstAttribute="top" secondItem="CbF-ML-xpa" secondAttribute="bottom" constant="8" id="NN0-qs-yf7"/>
                             <constraint firstItem="W17-jM-dvf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ORX-7Y-Wm6"/>
                             <constraint firstItem="W17-jM-dvf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="XMo-Pv-bhb"/>
+                            <constraint firstItem="34H-6O-YLW" firstAttribute="top" secondItem="W17-jM-dvf" secondAttribute="bottom" constant="8" id="mhB-K7-SwO"/>
+                            <constraint firstItem="34H-6O-YLW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ts6-Z5-a45"/>
+                            <constraint firstItem="CbF-ML-xpa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uYe-zB-C4c"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="boolSegmentedControl" destination="W17-jM-dvf" id="BcY-Oz-vBG"/>
+                        <outlet property="anotherBoolSegmentedControl" destination="W17-jM-dvf" id="uIe-UD-AJI"/>
+                        <outlet property="boolSegmentedControl" destination="CbF-ML-xpa" id="VQS-f5-yW3"/>
+                        <outlet property="yetAnotherBoolSegmentedControl" destination="34H-6O-YLW" id="LbI-KN-rgj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
