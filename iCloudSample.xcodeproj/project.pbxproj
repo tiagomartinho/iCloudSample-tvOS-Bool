@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA3530B91C0EC96100F9EFB8 /* iCloudBool.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3530B81C0EC96100F9EFB8 /* iCloudBool.swift */; };
+		EA3530BA1C0EC96300F9EFB8 /* iCloudBool.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3530B81C0EC96100F9EFB8 /* iCloudBool.swift */; };
+		EA3530BE1C0ECFE200F9EFB8 /* iCloudUpdates.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3530BD1C0ECFE200F9EFB8 /* iCloudUpdates.swift */; };
+		EA3530BF1C0ECFE400F9EFB8 /* iCloudUpdates.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3530BD1C0ECFE200F9EFB8 /* iCloudUpdates.swift */; };
 		EA41506A1C0D78EA004FCDAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA82EAEF1C0C302800ADD07E /* AppDelegate.swift */; };
 		EA41506C1C0D7A93004FCDAA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA82EAF11C0C302800ADD07E /* ViewController.swift */; };
-		EA41506E1C0D7AC8004FCDAA /* iCloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA41506D1C0D7AC8004FCDAA /* iCloud.swift */; };
-		EA41506F1C0D7B6F004FCDAA /* iCloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA41506D1C0D7AC8004FCDAA /* iCloud.swift */; };
 		EA82EAC61C0C301D00ADD07E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA82EAC41C0C301D00ADD07E /* Main.storyboard */; };
 		EA82EAC81C0C301D00ADD07E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA82EAC71C0C301D00ADD07E /* Assets.xcassets */; };
 		EA82EAD31C0C301E00ADD07E /* tvOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA82EAD21C0C301E00ADD07E /* tvOSTests.swift */; };
@@ -57,7 +59,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		EA41506D1C0D7AC8004FCDAA /* iCloud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iCloud.swift; sourceTree = "<group>"; };
+		EA3530B81C0EC96100F9EFB8 /* iCloudBool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iCloudBool.swift; sourceTree = "<group>"; };
+		EA3530BD1C0ECFE200F9EFB8 /* iCloudUpdates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iCloudUpdates.swift; sourceTree = "<group>"; };
 		EA82EABD1C0C301D00ADD07E /* tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tvOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA82EAC51C0C301D00ADD07E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA82EAC71C0C301D00ADD07E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -138,7 +141,8 @@
 			children = (
 				EA82EAEF1C0C302800ADD07E /* AppDelegate.swift */,
 				EA82EAF11C0C302800ADD07E /* ViewController.swift */,
-				EA41506D1C0D7AC8004FCDAA /* iCloud.swift */,
+				EA3530B81C0EC96100F9EFB8 /* iCloudBool.swift */,
+				EA3530BD1C0ECFE200F9EFB8 /* iCloudUpdates.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -463,7 +467,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA41506C1C0D7A93004FCDAA /* ViewController.swift in Sources */,
-				EA41506E1C0D7AC8004FCDAA /* iCloud.swift in Sources */,
+				EA3530BE1C0ECFE200F9EFB8 /* iCloudUpdates.swift in Sources */,
+				EA3530B91C0EC96100F9EFB8 /* iCloudBool.swift in Sources */,
 				EA41506A1C0D78EA004FCDAA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -489,8 +494,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA82EAF21C0C302800ADD07E /* ViewController.swift in Sources */,
+				EA3530BF1C0ECFE400F9EFB8 /* iCloudUpdates.swift in Sources */,
 				EA82EAF01C0C302800ADD07E /* AppDelegate.swift in Sources */,
-				EA41506F1C0D7B6F004FCDAA /* iCloud.swift in Sources */,
+				EA3530BA1C0EC96300F9EFB8 /* iCloudBool.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

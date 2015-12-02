@@ -1,0 +1,3 @@
+protocol iCloudUpdates {
+    func iCloudValuesDidChange()
+}

@@ -1,39 +1,26 @@
 import UIKit
 
-class ViewController: UIViewController {
-  
-    let iCloudKey = "aBoolInTheCloud"
-    var aBoolInTheCloud:Bool {
-        set {
-            NSUbiquitousKeyValueStore.defaultStore().setBool(newValue, forKey: iCloudKey)
-            updateUI()
-        }
-        get {
-            return NSUbiquitousKeyValueStore.defaultStore().boolForKey(iCloudKey)
-        }
-    }
+class ViewController: UIViewController, iCloudUpdates {
     
-    @IBOutlet weak var boolSegmentedControl: UISegmentedControl! {
-        didSet {
-            updateUI()
-        }
-    }
-    
-    @IBAction func toogleState(sender: UISegmentedControl) {
-        aBoolInTheCloud = (boolSegmentedControl.selectedSegmentIndex == 1)
-    }
+    var aBoolInTheCloud:iCloudBool?
+
+    @IBOutlet weak var boolSegmentedControl: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        aBoolInTheCloud = iCloudBool(iCloudKey: "aBoolInTheCloud", observer: self)
         updateUI()
     }
     
     func updateUI(){
-        boolSegmentedControl.selectedSegmentIndex = aBoolInTheCloud ? 1 : 0
+        boolSegmentedControl.selectedSegmentIndex = (aBoolInTheCloud?.value ?? false) ? 1 : 0
     }
     
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
+    @IBAction func toogleState(sender: UISegmentedControl) {
+        aBoolInTheCloud?.value = (boolSegmentedControl.selectedSegmentIndex == 1)
+    }
+    
+    func iCloudValuesDidChange(){
         updateUI()
     }
 }

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "ViewController.toogleState(UISegmentedControl) -&gt; ():ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "aBoolInTheCloud?.value">
+            </PersistentString>
+            <PersistentString
+               value = "(boolSegmentedControl.selectedSegmentIndex == 1)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.valueDidChange(NSNotification) -&gt; ():ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "aBoolInTheCloud?.value">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
