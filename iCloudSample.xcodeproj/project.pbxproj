@@ -27,7 +27,6 @@
 		EA82EAF51C0C302800ADD07E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA82EAF31C0C302800ADD07E /* Main.storyboard */; };
 		EA82EAF71C0C302800ADD07E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA82EAF61C0C302800ADD07E /* Assets.xcassets */; };
 		EA82EAFA1C0C302800ADD07E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA82EAF81C0C302800ADD07E /* LaunchScreen.storyboard */; };
-		EA82EB1E1C0C310E00ADD07E /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA82EB1D1C0C310E00ADD07E /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,7 +50,6 @@
 		EA82EAFB1C0C302800ADD07E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA82EB1B1C0C307500ADD07E /* iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = iOS.entitlements; sourceTree = "<group>"; };
 		EA82EB1C1C0C309B00ADD07E /* tvOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = tvOS.entitlements; sourceTree = "<group>"; };
-		EA82EB1D1C0C310E00ADD07E /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS9.0.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +64,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA82EB1E1C0C310E00ADD07E /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,7 +103,6 @@
 		EA82EAB21C0C300500ADD07E = {
 			isa = PBXGroup;
 			children = (
-				EA82EB1D1C0C310E00ADD07E /* CloudKit.framework */,
 				EA41506B1C0D78F6004FCDAA /* Common */,
 				EA82EABF1C0C301D00ADD07E /* tvOS */,
 				EA82EAEE1C0C302800ADD07E /* iOS */,
@@ -685,6 +681,7 @@
 				EA3530EB1C0ED2F600F9EFB8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EA82EAB61C0C300500ADD07E /* Build configuration list for PBXProject "iCloudSample" */ = {
 			isa = XCConfigurationList;
